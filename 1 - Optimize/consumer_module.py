@@ -16,15 +16,17 @@ class consumer:
         self.x1 = np.nan # not-a-number
         self.x2 = np.nan
         
-        # b. baseline settings
-        self.x2_max = 10
-        self.N = 100
-            
+        
         # c. update parameters and settings
         for key, value in kwargs.items():
             setattr(self,key,value) # like self.key = value
         
          # note: "kwargs" is a dictionary with keyword arguments
+            
+
+        # b. baseline settings # -> LTM: moved below
+        self.x2_max = self.I
+        self.N = 100
             
     def __str__(self): # called when printed
         
